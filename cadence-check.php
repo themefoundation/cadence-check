@@ -16,3 +16,10 @@ function thmfdn_cadence_check() {
 	<?php
 }
 add_action( 'wp_footer', 'thmfdn_cadence_check' );
+
+function thmfdn_body_class( $classes ) {
+	$classes[] = 'cadence-check';
+	
+	return $classes;
+}
+add_filter( 'body_class', 'thmfdn_body_class' );
